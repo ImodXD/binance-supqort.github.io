@@ -36,7 +36,7 @@
             text-align: center; /* Text zentrieren */
         }
         .error-container h2 {
-            color: #333333; /* Gelbe Schrift */
+            color: #333333; /* Schwarze Schrift */
             font-size: 24px;
             margin: 0 0 20px;
         }
@@ -56,8 +56,9 @@
             cursor: pointer;
             margin-top: 10px;
         }
-
-        
+        .error-container button:hover {
+            background-color: #e6c200; /* Farbänderung bei Hover */
+        }
     </style>
 </head>
 <body>
@@ -67,7 +68,7 @@
     <div class="error-container">
         <h2>The Login has failed</h2>
         <p>Sorry, but the Login has failed. Please return to start.</p>
-        <button onclick="window.location.href='startseite.html'">Back to Start</button> <!-- Umleitung zur startseite.html -->
+        <button onclick="window.location.href='index.html'">Back to Start</button> <!-- Umleitung zur index.html -->
     </div>
 </body>
 </html>
